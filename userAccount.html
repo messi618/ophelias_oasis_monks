@@ -21,6 +21,36 @@
   <link href="css/business-casual.min.css" rel="stylesheet">
   <link href="css/bill.css" rel="stylesheet">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #3BB9FF;
+      color: white;
+    }
+    </style>
 </head>
 
 <body>
@@ -69,101 +99,163 @@
           
 
             
-                  <div class="container">
-                  <div class="row">
-                      <div class="col-xs-12">
-                          <div class="text-center">
-                              <i class="fa fa-search-plus pull-left icon"></i>
-                              <h1>User Account Information</h1><br>
-                              <h2>Invoice #33221</h2>
-                          </div>
-                          <hr>
-                          <div class="row">
-                              <div class="col-4">
-                                  <div class="panel panel-default height">
-                                      <div class="panel-heading">Billing Details</div>
-                                      <div class="panel-body">
-                                          <strong>Bill Nye</strong><br>
-                                          123 abc st<br>
-                                          San Diego<br>
-                                          Ca<br>
-                                          <strong>92154</strong><br>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-4">
-                                  <div class="panel panel-default height">
-                                      <div class="panel-heading">Payment Information</div>
-                                      <div class="panel-body">
-                                          <strong>Card Name:</strong> Visa<br>
-                                          <strong>Card Number:</strong> ***** 1234<br>
-                                          <strong>Exp Date:</strong> 09/2020<br>
-                                      </div>
-                                  </div>
-                              </div>
-                             
-                              <div class="col-4">
-                                  <div class="panel panel-default height">
-                                      <div class="panel-heading">Shipping Address</div>
-                                      <div class="panel-body">
-                                          <strong>Bill Nye</strong><br>
-                                          123 abc st<br>
-                                          San Diego<br>
-                                          Ca<br>
-                                          <strong></strong><br>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="panel panel-default">
-                              <div class="panel-heading">
-                                  <h3 class="text-center"><strong>Summary</strong></h3>
-                              </div>
-                              <div class="panel-body">
-                                  <div class="table-responsive">
-                                      <table class="table table-condensed">
-                                          <thead>
-                                              <tr>
-                                                  <td><strong>Room</strong></td>
-                                                  <td class="text-center"><strong>Price</strong></td>
-                                                  <td class="text-center"><strong># People</strong></td>
-                                                  <td class="text-right"><strong>Date</strong></td>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              <tr>
-                                                  <td>Suite 5C</td>
-                                                  <td class="text-center">$80</td>
-                                                  <td class="text-center">2</td>
-                                                  <td class="text-right">Dec 15 - Dec 20</td>
-                                              </tr>
-                                              <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                              </tr>
-              
-                                              
-                                              <tr>
-                                                  <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
-                                                  <td class="emptyrow"></td>
-                                                  <td class="emptyrow text-center"><strong>Total</strong></td>
-                                                  <td class="emptyrow text-right">$80.00</td>
-                                              </tr>
-                                          </tbody>
-                                      </table>
-                                  </div>
-                              </div>
+                  
+<div class="container bootstrap snippet">
+    <div class="row">
+      <div class="col-sm-10"><h1>Vivek Kumar</h1></div>
+      <div class="col-sm-2"><a href="/users" class="pull-right"></a></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><!--left col-->
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block file-upload">
+      </div></hr><br>
+
+               
+          <div class="panel panel-default">
+            <div class="panel-heading">Time left for check-in <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body">...</div>
+          </div>
+          
+          
+          <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Rewards/Points</strong></span> 125</li>
+          </ul> 
+               
+          <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+              <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+            </div>
+          </div>
+          
+        </div><!--/col-3-->
+
+        <!--Account tab-->
+      <div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#account">Account</a></li>
+                <li><a data-toggle="tab" href="#messages">Messages </a> </li>
+                <li><a data-toggle="tab" href="#billing">Billing</a></li>
+              </ul>              
+          <div class="tab-content">
+            <div class="tab-pane active" id="account">
+
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      <div class="form-group"> 
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="user name " title="enter your first name if any.">
                           </div>
                       </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                          </div>
+                      </div>
+        
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter number" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="enter email" title="enter your email.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Location</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="City" title="enter a location">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="pss" placeholder="enter password" title="enter your password.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="pss" placeholder="enter password" title="enter your password2.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                                <button type="button" class="btn btn-danger">Update</button>       
+                            </div>
+                      </div>
+                </form>  
+             </div>
+             
+             <!--Messages tab tab-->
+             <div class="tab-pane" id="messages">
+                  <div class="alert alert-success alert-dismissible fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <strong>Unread-</strong> You have 2 unread messages
                   </div>
+
+                  <div class="panel panel-default">
+                  <div class="panel-heading">What you need ....</div>
+                  <div class="panel-body">New deals! Check them out</div>
+                </div>
               </div>
-            
+              <!--END of Messages tab tab-->
+               
+              <!--Billing tab-->
+              <div class="tab-pane" id="billing">
+
+                  <button class="btn btn-secondary" onclick='window.location.href =  "userAccount2.html"'>Display bill</button>
+              </div>  
+              <!--END of Billing tab-->
+
+              </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+                                                      
+
+
+<script>
+$(document).ready(function() {
+    
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.avatar').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+});
+</script>
+
+
+<div class="footer">
+  <p></p>
+</div>
                       
                       
               
