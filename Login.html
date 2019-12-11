@@ -81,8 +81,7 @@
                   <label for="exampleInputPassword1">Password</label>
                   <input type="password" class="form-control" id="pass" placeholder="Password">
                 </div>
-                
-                <button type="submit" class="btn btn-primary" id="loginbutton">Submit</button>
+                <button type="button" class="btn btn-primary" id="loginbutton">Submit </button>
               </form>
               <div class="row">
                 <div class="col-9"></div>
@@ -104,19 +103,20 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="loginMin.js"></script>
   <script>
   $(function() {
     $('#loginbutton').click(function(){
         var uid=$('#uid').val();
         var pass=$('#pass').val();
-        window.location.href='Contact.html';
-          if(uid=="vivekkumar@gmail.com"&&pass=="messi"){
+        
+          if(uid==sessionStorage.u&&pass==sessionStorage.p){
             console.log("success");
             window.location.href='http://google.com';
-            location.replace("http://google.com");
-            window.location = 'http://www.google.com';
-            window.location.assign('http://google.com');
+            sessionStorage.l=1;
           }
+          else
+          {window.alert('Authentication Failed');}
     });
   });
   </script>
