@@ -132,19 +132,12 @@
         'format':'yyyy-mm-dd',
         'autoclose' : true
       });
-
-      $('#r1').click(function(){
-          localStorage.reservation=1;
-      });
-      $('#r2').click(function(){
-          localStorage.reservation=2;
-      });
-      $('#r3').click(function(){
-          localStorage.reservation=3;
-      });
-      $('#r4').click(function(){
-          localStorage.reservation=4;
-      });
+      var total;
+      var base;
+      if(localStorage.reservation==1){base=90}
+      if(localStorage.reservation==2){base=100}
+      if(localStorage.reservation==3){base=120}
+      if(localStorage.reservation==4){base=130}
 
     });
   </script>
