@@ -21,6 +21,18 @@
   <link href="css/bill.css" rel="stylesheet">
 
   <link href="css/userAccount.css" rel="stylesheet">
+
+  <!--chart.js-->
+  <script src="scripts/pie.js"></script>
+  <link href="css/pie.css">
+  <style>
+      #chart {
+          padding: 0;            
+          max-width: 380px;
+          margin: 35px auto;
+      }
+  </style>
+
     
 </link>
 <style>
@@ -86,19 +98,19 @@
       <div class="col-4"><!--left col-->
       <div class="text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-        <h6>Upload a different photo...</h6>
+        <br><br><h6>Upload a different photo...</h6><br><br>
         <input type="file" class="text-center center-block file-upload">
       </div></hr><br>
 
                
           <div class="panel panel-default">
-            <div class="panel-heading">Time left for check-in <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-heading"> <i class="fa fa-link fa-1x"></i></div>
             <div class="panel-body">...</div>
           </div>
           
           
           <ul class="list-group">
-            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-muted"> <i class="fa fa-dashboard fa-1x"></i></li>
             <li class="list-group-item text-right"><span class="pull-left"><strong> </strong></span> </li>
           </ul> 
                
@@ -172,20 +184,60 @@
              
              <!--Messages tab tab-->
              <div class="tab-pane" id="messages">
-                  <div class="alert alert-success alert-dismissible fade in">
+                  <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Unread-</strong> You have 0 unread messages
+                      <strong>Current-</strong> This is your current Occupancy Report
                   </div>
 
+                    <!--Pie Chart here-->
+                    <div id="chart">
+
+                      </div>
+                      
+                      <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+                  
+                      <script>
+                          var options1 = {
+                              chart: {
+                                  width: 700,
+                                  type: 'pie',
+                              },
+                              labels: [  'Rooms Under Maintenance','Available Rooms', 'Booked Rooms'],
+                              series: [5, 25, 15],
+                              responsive: [{
+                                  breakpoint: 480,
+                                  options: {
+                                      chart: {
+                                          width: 200
+                                      },
+                                      legend: {
+                                          position: 'bottom'
+                                      }
+                                  }
+                              }]
+                          }
+                  
+                          var chart = new ApexCharts(
+                              document.querySelector("#chart"),
+                              options1
+                          );
+                  
+                          chart.render();
+                  
+                      </script>
+
+
+
                   <div class="panel panel-default">
-                  <div class="panel-heading">We will update you with new offers and deals here.</div>
-                  <div class="panel-body">Thank you for your reservation with Ophelia's oasis resort. We will make sure that you have an awesome time here!!!</div>
+                  <div class="panel-heading">*For the Eyes of Management Only</div>
+                  <div class="panel-body"></div>
                 </div>
               </div>
               <!--END of Messages tab tab-->
                
               <!--Billing tab-->
               <div class="tab-pane" id="billing">
+                
 
                   <button class="btn btn-success" onclick='window.location.href =  "userAccount2.html"'>Display bill</button>
               </div>  
@@ -213,9 +265,23 @@ $(document).ready(function() {
         }
     }
     
+
     $(".file-upload").on('change', function(){
         readURL(this);
     });
+
+    var data={
+      value:100,
+      color:"red",
+      highlight:"green",
+      label:"x"
+    }
+    //pie
+    var ctx=$("#report").get(0).getContext("2d");
+    var myPieChart = new Chart(ctx, data
+);
+
+
 });
 </script>
                       
@@ -239,6 +305,8 @@ $(document).ready(function() {
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!--datepicker bootstrap-->
   <script src="scripts/datepicker.js"></script>
   <link rel="stylesheet" href="css/datepicker.css">
   <script>
@@ -263,6 +331,7 @@ $(document).ready(function() {
 
     });
   </script>
+  
 </body>
 
 </html>
