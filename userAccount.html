@@ -50,6 +50,36 @@
       background-color: #3BB9FF;
       color: white;
     }
+   
+
+    .tabss ul {
+      list-style-type: none;
+      overflow: hidden;
+      background-color: #333;
+      width: 50%;
+
+
+    }
+    .tabss li {
+      float: center;
+
+    }
+    .tabss li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      float: center;
+
+    }
+    .tabss li a:hover {
+      background-color: #FFFFFF;
+      float: center;}
+    
+      .tab1{
+        font-size: 15px;
+      }
     </style>
 </head>
 
@@ -106,7 +136,7 @@
       <div class="col-sm-2"><a href="/users" class="pull-right"></a></div>
     </div>
     <div class="row">
-      <div class="col-sm-3"><!--left col-->
+      <div class="col-4"><!--left col-->
       <div class="text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
@@ -135,27 +165,20 @@
         </div><!--/col-3-->
 
         <!--Account tab-->
-      <div class="col-sm-9">
-            <ul class="nav nav-tabs">
+      <div class="col-8 tabss">
+            <ul class="nav nav-tabs tab1">
                 <li class="active"><a data-toggle="tab" href="#account">Account</a></li>
                 <li><a data-toggle="tab" href="#messages">Messages </a> </li>
                 <li><a data-toggle="tab" href="#billing">Billing</a></li>
-              </ul>              
+              </ul> <br>              
           <div class="tab-content">
             <div class="tab-pane active" id="account">
-
+               
                   <form class="form" action="##" method="post" id="registrationForm">
                       <div class="form-group"> 
                           <div class="col-xs-6">
-                              <label for="first_name"><h4>First name</h4></label>
+                              <label for="first_name"><h4>Name</h4></label>
                               <input type="text" class="form-control" name="first_name" id="first_name" placeholder="user name " title="enter your first name if any.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                            <label for="last_name"><h4>Last name</h4></label>
-                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
                           </div>
                       </div>
         
@@ -176,8 +199,8 @@
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                              <label for="email"><h4>Location</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="City" title="enter a location">
+                              <label for="email"><h4>Address</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="Address" title="enter a location">
                           </div>
                       </div>
                       <div class="form-group">
@@ -189,10 +212,7 @@
                       </div>
                       <div class="form-group">
                           
-                          <div class="col-xs-6">
-                            <label for="password2"><h4>Verify</h4></label>
-                              <input type="password" class="form-control" name="password2" id="pss" placeholder="enter password" title="enter your password2.">
-                          </div>
+
                       </div>
                       <div class="form-group">
                            <div class="col-xs-12">
@@ -207,12 +227,12 @@
              <div class="tab-pane" id="messages">
                   <div class="alert alert-success alert-dismissible fade in">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Unread-</strong> You have 2 unread messages
+                      <strong>Unread-</strong> You have 0 unread messages
                   </div>
 
                   <div class="panel panel-default">
-                  <div class="panel-heading">What you need ....</div>
-                  <div class="panel-body">New deals! Check them out</div>
+                  <div class="panel-heading">We will update you with new offers and deals here.</div>
+                  <div class="panel-body">Thank you for your reservation with Ophelia's oasis resort. We will make sure that you have an awesome time here!!!</div>
                 </div>
               </div>
               <!--END of Messages tab tab-->
@@ -220,7 +240,7 @@
               <!--Billing tab-->
               <div class="tab-pane" id="billing">
 
-                  <button class="btn btn-secondary" onclick='window.location.href =  "userAccount2.html"'>Display bill</button>
+                  <button class="btn btn-success" onclick='window.location.replace =  "userAccount2.html"'>Display bill</button>
               </div>  
               <!--END of Billing tab-->
 
@@ -251,11 +271,6 @@ $(document).ready(function() {
     });
 });
 </script>
-
-
-<div class="footer">
-  <p></p>
-</div>
                       
                       
               
