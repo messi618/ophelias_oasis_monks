@@ -69,25 +69,39 @@
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
                 
-                <span class="section-heading-lower">Login</span>
+                <span class="section-heading-lower">New User</span>
               </h2>
-              <form>
-                  <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <form action="/action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                  <p>Please fill out the information below to create an account.</p>
+                  <hr>
+              
+                  <label for="first"><b>First Name</b></label><br>
+                  <input type="text" placeholder="Enter First Name" name="first" required><br>
+              
+                  <label for="last"><b>Last Name</b></label><br>
+                  <input type="text" placeholder="Enter Last Name" name="last" required><br>
+              
+                  <label for="email"><b>Email</b></label><br>
+                  <input type="text" placeholder="Enter Email" name="email" required><br>
+              
+                  <label for="psw"><b>Password</b></label><br>
+                  <input type="password" placeholder="Enter Password" name="psw" required><br>
+              
+                  <label for="psw-repeat"><b>Repeat Password</b></label><br>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+                  
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+                  
+                  <div class="clearfix">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-              <div class="row">
-                <div class="col-9"></div>
-                <div class="col-3"><button type="button" class="btn btn-secondary">manager login</button></div>
-            </div>
+              
             </div>
           </div>
         </div>
