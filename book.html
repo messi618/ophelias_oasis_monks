@@ -70,19 +70,18 @@
               <span class="section-heading-upper">Select Dates</span>
             </h2>
             <div class="row">
-              <div class="col-6">
+              <div class="col-6 dates"> 
                 Start Date<br>
-                <input type="text" class="">
+                <input type="text" class="datepicker" id="start">
               </div>
-              <div class="col-6">
+              <div class="col-6 dates">
                   End Date<br>
-                <input type="text" class="">
+                <input type="text" class="datepicker" id="end">
               </div>
             </div>
-            <br><br>
-                <button class="btn btn-primary">NEXT</button>
-          </div>
-        </div>
+            
+          </div><br>
+            <button class="btn btn-secondary" onclick='window.location.href =  "book2.html"'>NEXT</button>
       </div>
     </div>
   </section>
@@ -96,7 +95,16 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="scripts/datepicker.js"></script>
+  <link rel="stylesheet" href="css/datepicker.css">
+  <script>
+    $(function(){
+      $('.dates #start,#end').datepicker({
+        'format':'yyyy-mm-dd',
+        'autoclose' : true
+      });
+    });
+  </script>
 </body>
 
 </html>
