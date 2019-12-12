@@ -39,6 +39,9 @@
   .tab1{
     width: 100% !important;
   }
+  .cont{
+    font-size:12px ;
+  }
 </style>
 </head>
 
@@ -105,13 +108,13 @@
                
           <div class="panel panel-default">
             <div class="panel-heading"> <i class="fa fa-link fa-1x"></i></div>
-            <div class="panel-body">...</div>
+            <div class="panel-body">Profile:</div>
           </div>
           
           
           <ul class="list-group">
-            <li class="list-group-item text-muted"> <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong> </strong></span> </li>
+            <li class="list-group-item text-muted"> <i class="fa fa-dashboard fa-1x">Current Access Level</i></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong> Manager</strong></span> </li>
           </ul> 
                
           <div class="panel panel-default">
@@ -130,7 +133,7 @@
                 <li><a data-toggle="tab" href="#messages">Occupancy Report</a> </li>
                 <li><a data-toggle="tab" href="#billing">Revenue Report</a></li>
               </ul> <br>           
-          <div class="tab-content">
+          <div class="tab-content cont">
             <div class="tab-pane active" id="account">
                
                   <form class="form" action="##" method="post" id="registrationForm">
@@ -194,7 +197,7 @@
 
                       </div>
                       
-                      <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+                      <script src="scripts/pie.js"></script>
                   
                       <script>
                           var options1 = {
@@ -237,9 +240,51 @@
                
               <!--Billing tab-->
               <div class="tab-pane" id="billing">
-                
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      <div class="form-group"> 
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>Expected Revenue - without Discount</h4></label>
+                              <input type="text" readonly class="form-control" name="first_name" id="r1" placeholder=" " title="enter your first name if any.">
+                          </div>
+                      </div>
+        
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Expected Revenue - with Discount</h4></label>
+                              <input type="text" readonly class="form-control" name="mobile" id="r2" placeholder="" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Hotel Expenditure</h4></label>
+                              <input type="email" readonly class="form-control" name="email" id="r3" placeholder="" title="enter your email.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Staff Expenditure</h4></label>
+                              <input type="email" readonly class="form-control" name="email" id="r4" placeholder="" title="enter your email.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Total Profit (Total Revenue - Total Expenditure)</h4></label>
+                              <input type="email" readonly class="form-control" id="r5" placeholder="" title="enter a location">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
 
-                  <button class="btn btn-success" onclick='window.location.href =  "userAccount2.html"'>Display bill</button>
+                      </div>
+                </form>  
+
+                  <div class="panel panel-default">
+                  <div class="panel-heading">*For the Eyes of Management Only</div>
+                  <div class="panel-body"></div>
               </div>  
               <!--END of Billing tab-->
 
