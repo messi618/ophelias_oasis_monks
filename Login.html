@@ -105,11 +105,26 @@
   <script src="scripts/loginMin.js"></script>
   <script>
   $(function() {
+    var u;
+        var p;
     $('#loginbutton').click(function(){
         var uid=$('#uid').val();
         var pass=$('#pass').val();
         
-          if(uid==sessionStorage.u&&pass==sessionStorage.p){
+        
+          //reading json db
+          $.getJSON('database/jsonDB/user.json',function(data){
+            //console.log("inside db");
+              $(data).each(function(id,value){
+                  u = value.customers.customer[0].email;
+                  value.customers.customer[0].email = "viv";
+                  p = value.customers.customer[0].password;
+                  
+          console.log(u);
+          
+          console.log(p);
+
+          if(uid==u&&pass==p){
             console.log("success");
             window.location.href='userAccount.html';
             sessionStorage.l=1;
@@ -117,13 +132,9 @@
           else
           {window.alert('Authentication Failed');}
 
-          //reading json db
-          $.getJSON('database/jsonDB/user.json',function(data){
-            //console.log("inside db");
-              $(data.customers).each(function(id,value){
-                  console.log(value.customers.customer.name);
               });
           });
+
 
 
 
