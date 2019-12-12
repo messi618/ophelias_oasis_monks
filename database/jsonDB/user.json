@@ -1,12 +1,16 @@
-{
+{   "dbname": "customerDB",
     "customers":
     {
         "customer":[
             {"name":"vivek",
             "email":"vivek@gmail.com",
-            "phone":"0000000000"
+            "phone":"0000000000",
+            "password":"messi"
             },
-            {}
+            {
+
+
+            }
         ]
     }
 

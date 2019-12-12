@@ -1,0 +1,18 @@
+{   "dbname": "managerDB",
+    "customers":
+    {
+        "customer":[
+            {"name":"Guy Leonard",
+            "email":"guyleonard@gmail.com",
+            "phone":"0000000000",
+            "password":"messi"
+            },
+            {
+
+
+            }
+        ]
+    }
+
+
+}

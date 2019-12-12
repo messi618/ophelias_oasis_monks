@@ -1,0 +1,17 @@
+{   "dbname": "bookingDB",
+    "customers":
+    {
+        "customer":[
+            {"name":"vivek",
+            "email":"vivek@gmail.com",
+            "phone":"0000000000"
+            },
+            {
+
+
+            }
+        ]
+    }
+
+
+}

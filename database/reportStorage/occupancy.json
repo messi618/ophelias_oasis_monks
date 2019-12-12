@@ -1,0 +1,6 @@
+{   "dbname": "RevenueDB",
+    "TotalRooms":45,
+    "BookedRooms":15,
+    "AvailableRooms":25,
+    "MaintenanceRooms":5
+}
