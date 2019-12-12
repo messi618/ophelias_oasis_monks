@@ -5,3 +5,11 @@ Project Ophelia's Oasis - Read ME
 
 2.	Landing page : index.html 
 	please open this page first to start the journey.
+
+3. 	User Login-
+	User ID : vivek@gmail.com
+	Password : messi
+
+3. 	Manager Login-
+	User ID : guyleonard@gmail.com
+	Password : messi
