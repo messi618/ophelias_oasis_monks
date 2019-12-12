@@ -1,10 +1,11 @@
 {   "dbname": "managerDB",
-    "customers":
+    "managers":
     {
-        "customer":[
+        "manager":[
             {"name":"Guy Leonard",
-            "email":"guyleonard@gmail.com",
             "phone":"0000000000",
+            "email":"guyleonard@gmail.com",
+            "address":"5500 campanile dr, SD, CA",
             "password":"messi"
             },
             {

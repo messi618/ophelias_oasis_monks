@@ -105,13 +105,27 @@
             var uid=$('#uid').val();
             var pass=$('#pass').val();
             
-              if(uid==sessionStorage.mu&&pass==sessionStorage.mp){
-                console.log("success");
-                window.location.href='managerAccount.html';
-                sessionStorage.l=1;
-              }
-              else
-              {window.alert('Authentication Failed');}
+            
+          //reading json db
+          $.getJSON('database/jsonDB/manager.json',function(data){
+            //console.log("inside db");
+              $(data).each(function(id,value){
+                  u = value.managers.manager[0].email;
+                  p = value.managers.manager[0].password;
+                          
+                      console.log(u);
+                      console.log(p);
+
+                  if(uid==u&&pass==p){
+                    console.log("success");
+                    window.location.href='managerAccount.html';
+                    sessionStorage.ml=1;
+                  }
+                  else
+                  {window.alert('Authentication Failed');}
+
+              });
+          });
         });
       });
       </script>

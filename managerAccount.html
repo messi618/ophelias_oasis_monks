@@ -136,11 +136,11 @@
           <div class="tab-content cont">
             <div class="tab-pane active" id="account">
                
-                  <form class="form" action="##" method="post" id="registrationForm">
+                  <form class="form" action="##" method="post" id="registrationForm1">
                       <div class="form-group"> 
                           <div class="col-xs-6">
                               <label for="first_name"><h4>Name</h4></label>
-                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="user name " title="enter your first name if any.">
+                              <input type="text" class="form-control" name="first_name" id="m1" placeholder="user name " title="enter your first name if any.">
                           </div>
                       </div>
         
@@ -148,28 +148,28 @@
                       <div class="form-group">
                           <div class="col-xs-6">
                              <label for="mobile"><h4>Mobile</h4></label>
-                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter number" title="enter your mobile number if any.">
+                              <input type="text" class="form-control" name="mobile" id="m2" placeholder="enter number" title="enter your mobile number if any.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="enter email" title="enter your email.">
+                              <input type="email" class="form-control" name="email" id="m3" placeholder="enter email" title="enter your email.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Address</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="Address" title="enter a location">
+                              <input type="email" class="form-control" id="m4" placeholder="Address" title="enter a location">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="password"><h4>Password</h4></label>
-                              <input type="password" class="form-control" name="password" id="pss" placeholder="enter password" title="enter your password.">
+                              <input type="password" class="form-control" name="password" id="m5" placeholder="enter password" title="enter your password.">
                           </div>
                       </div>
                       <div class="form-group">
@@ -202,7 +202,7 @@
                       <script>
                           var options1 = {
                               chart: {
-                                  width: 700,
+                                  width: 600,
                                   type: 'pie',
                               },
                               labels: [  'Rooms Under Maintenance','Available Rooms', 'Booked Rooms'],
@@ -241,6 +241,7 @@
               <!--Billing tab-->
               <div class="tab-pane" id="billing">
                   <form class="form" action="##" method="post" id="registrationForm">
+                      <h6>*All amounts in USD</h6>
                       <div class="form-group"> 
                           <div class="col-xs-6">
                               <label for="first_name"><h4>Expected Revenue - without Discount</h4></label>
@@ -366,7 +367,7 @@ $(document).ready(function() {
         'autoclose' : true
       });
 
-          //reading json db
+          //reading json db - revenue report
           $.getJSON('database/reportStorage/revenue.json',function(data){
             //console.log("inside db");
               $(data).each(function(id,value){
@@ -382,7 +383,23 @@ $(document).ready(function() {
                   $('#r5').attr("value",r5);
                   r6 = r3 - (r4 + r5);  //revenue - expenditure
                   $('#r6').attr("value",r6);
+              });
+          });
 
+          //reading json db - user
+          $.getJSON('database/jsonDB/manager.json',function(data){
+            //console.log("inside db");
+              $(data).each(function(id,value){
+                  m1 = value.managers.manager[0].name;
+                  $('#m1').attr("value",m1);console.log("m1 "+m1);
+                  m2 = value.managers.manager[0].phone;
+                  $('#m2').attr("value",m2);
+                  m3 = value.managers.manager[0].email;
+                  $('#m3').attr("value",m3);
+                  m4 = value.managers.manager[0].address;
+                  $('#m4').attr("value",m4);
+                  m5 = value.managers.manager[0].password;
+                  $('#m5').attr("value",m5);
               });
           });
 
