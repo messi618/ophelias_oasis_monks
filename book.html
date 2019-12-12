@@ -77,13 +77,13 @@
                 <input type="text" class="datepicker" id="end">
               </div>
             </div>
-            
           </div><br>
-            <button class="btn btn-secondary" onclick='window.location.href =  "book2.html"'>NEXT</button>
+            <button class="btn btn-secondary" id="next">NEXT</button>
       </div>
     </div>
   </section>
 
+  <!--footer-->
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; Ophelia Oasis</p>
@@ -101,6 +101,24 @@
         'format':'yyyy-mm-dd',
         'autoclose' : true
       });
+
+      var start;
+      var end;
+    
+    $('#next').on('click',function() { 
+
+      start = $('one').val();
+      //alert(start);
+      console.log("start "+start);
+      end = $('end').val();
+      console.log("end "+end);
+      window.location.href =  "book2.html"
+
+        //if(start>end){} 
+    });
+
+      
+
     });
   </script>
 </body>
