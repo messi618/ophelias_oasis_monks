@@ -116,7 +116,7 @@
           $.getJSON('database/jsonDB/user.json',function(data){
             //console.log("inside db");
               $(data).each(function(id,value){
-                value.customers.customer[0].email.value() = "viv@gmail.com";
+                value.customers.customer[0].email = "viv@gmail.com";
                   u = value.customers.customer[0].email;
                   p = value.customers.customer[0].password;
                           

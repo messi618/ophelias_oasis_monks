@@ -1,6 +1,7 @@
 {   "dbname": "RevenueDB",
-    "expectedRevenueWD":45,
-    "expectedRevenueWOD":45,
-    "actualRevenue":25,
-    "MaintenanceRooms":5
+    "expectedRevenueWD":400000,
+    "expectedRevenueWOD":550000,
+    "actualRevenue":350000,
+    "hotelExpenditure":50000,
+    "staffExpenditure":120000
 }

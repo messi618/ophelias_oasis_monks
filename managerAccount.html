@@ -258,7 +258,7 @@
                       <div class="form-group">
                           <div class="col-xs-6">
                              <label for="mobile"><h4>Actual Revenue</h4></label>
-                              <input type="text" readonly class="form-control" name="mobile" id="r23" placeholder="" >
+                              <input type="text" readonly class="form-control" name="mobile" id="r3" placeholder="" >
                           </div>
                       </div>
                       <div class="form-group">
@@ -298,8 +298,7 @@
           </div><!--/tab-content-->
 
         </div><!--/col-9-->
-    </div><!--/row-->
-                                                      
+    </div><!--/row-->                                    
 
 
 <script>
@@ -367,18 +366,25 @@ $(document).ready(function() {
         'autoclose' : true
       });
 
-      $('#r1').click(function(){
-          localStorage.reservation=1;
-      });
-      $('#r2').click(function(){
-          localStorage.reservation=2;
-      });
-      $('#r3').click(function(){
-          localStorage.reservation=3;
-      });
-      $('#r4').click(function(){
-          localStorage.reservation=4;
-      });
+          //reading json db
+          $.getJSON('database/reportStorage/revenue.json',function(data){
+            //console.log("inside db");
+              $(data).each(function(id,value){
+                  r1 = value.expectedRevenueWD;
+                  $('#r1').attr("value",r1);
+                  r2 = value.expectedRevenueWOD;
+                  $('#r2').attr("value",r2);
+                  r3 = value.actualRevenue;
+                  $('#r3').attr("value",r3);
+                  r4 = value.hotelExpenditure;
+                  $('#r4').attr("value",r4);
+                  r5 = value.staffExpenditure;
+                  $('#r5').attr("value",r5);
+                  r6 = r3 - (r4 + r5);  //revenue - expenditure
+                  $('#r6').attr("value",r6);
+
+              });
+          });
 
     });
   </script>
