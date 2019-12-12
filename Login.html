@@ -116,6 +116,17 @@
           }
           else
           {window.alert('Authentication Failed');}
+
+          //reading json db
+          $.getJSON('database/jsonDB/user.json',function(data){
+            //console.log("inside db");
+              $(data.customers).each(function(id,value){
+                  console.log(value.customers.customer.name);
+              });
+          });
+
+
+
     });
   });
   </script>
