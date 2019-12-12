@@ -120,7 +120,7 @@
                       <div class="form-group"> 
                           <div class="col-xs-6">
                               <label for="first_name"><h4>Name</h4></label>
-                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="user name " title="enter your first name if any.">
+                              <input type="text" class="form-control" name="first_name" id="c1" placeholder="user name " title="enter your first name if any.">
                           </div>
                       </div>
         
@@ -128,28 +128,28 @@
                       <div class="form-group">
                           <div class="col-xs-6">
                              <label for="mobile"><h4>Mobile</h4></label>
-                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter number" title="enter your mobile number if any.">
+                              <input type="text" class="form-control" name="mobile" id="c2" placeholder="enter number" title="enter your mobile number if any.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="enter email" title="enter your email.">
+                              <input type="email" class="form-control" name="email" id="c3" placeholder="enter email" title="enter your email.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Address</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="Address" title="enter a location">
+                              <input type="email" class="form-control" id="c4" placeholder="Address" title="enter a location">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="password"><h4>Password</h4></label>
-                              <input type="password" class="form-control" name="password" id="pss" placeholder="enter password" title="enter your password.">
+                              <input type="password" class="form-control" name="password" id="c5" placeholder="enter password" title="enter your password.">
                           </div>
                       </div>
                       <div class="form-group">
@@ -255,6 +255,26 @@ $(document).ready(function() {
       $('#r4').click(function(){
           localStorage.reservation=4;
       });
+
+
+      //reading json db - user
+      $.getJSON('database/jsonDB/user.json',function(data){
+            //console.log("inside db");
+              $(data).each(function(id,value){
+                  c1 = value.customers.customer[0].name;
+                  $('#c1').attr("value",c1);
+                  c2 = value.customers.customer[0].phone;
+                  $('#c2').attr("value",c2);
+                  c3 = value.customers.customer[0].email;
+                  $('#c3').attr("value",c3);
+                  c4 = value.customers.customer[0].address;
+                  $('#c4').attr("value",c4);
+                  c5 = value.customers.customer[0].password;
+                  $('#c5').attr("value",c5);
+              });
+          });
+
+
 
     });
   </script>
